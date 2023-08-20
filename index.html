@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Tomáš Jirásek" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Avionsalon - Cvičení JavaScript</title>
+  </head>
+  <body>
+    <div class="web-wrap">
+      <header>
+        <h1 class="font-logo">
+          <span class="sm-hide">✈️</span>Avionsalon<span class="sm-hide"
+            >✈️</span
+          >
+        </h1>
+      </header>
+      <main>
+        <form action="" class="flight-order-form">
+          <section class="destinations">
+            <h2 class="font-title">Kam chcete letět ?</h2>
+            <div class="destination-selection">
+              <div class="destination-card" id="destination-0-card">
+                <h3>Praha</h3>
+                <figure>
+                  <img src="/prague.png/" alt="Prague photo" />
+                  <figcaption>
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                  </figcaption>
+                </figure>
+                <p class="card-price">3000<span class="currency">CZK</span></p>
+                <a href="#destination-2">
+                  <input
+                    type="button"
+                    value="Vybrat Prahu"
+                    class="btn-card"
+                    id="destination-0"
+                  />
+                </a>
+              </div>
+              <div class="destination-card" id="destination-1-card">
+                <h3>Londýn</h3>
+                <figure>
+                  <img src="/london.png" alt="London photo" />
+                  <figcaption>
+                    Lorem ipsum dolor sit amet consectetur.
+                  </figcaption>
+                </figure>
+                <p class="card-price">6500<span class="currency">CZK</span></p>
+                <a href="#destination-2">
+                  <input
+                    type="button"
+                    value="Vybrat Londýn"
+                    class="btn-card"
+                    id="destination-1"
+                /></a>
+              </div>
+              <div class="destination-card" id="destination-2-card">
+                <h3>New York</h3>
+                <figure>
+                  <img src="/newyork.png/" alt="New York photo" />
+                  <figcaption>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing.
+                  </figcaption>
+                </figure>
+                <p class="card-price">15702<span class="currency">CZK</span></p>
+                <a href="#destination-2">
+                  <input
+                    type="button"
+                    value="Vybrat New York"
+                    class="btn-card"
+                    id="destination-2"
+                /></a>
+              </div>
+            </div>
+          </section>
+          <section class="flight-details">
+            <h2 class="font-title">Detaily k letu</h2>
+            <div class="details-wrap">
+              <div class="count-return-wrap">
+                <div class="count-wrap">
+                  <label for="flight-count">Vyberte počet letenek:</label>
+                  <select name="" id="flight-count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="flight-return-wrap">
+                  <label for="return-chkbx">Zpáteční letenka:</label>
+                  <input type="checkbox" name="" id="return-chkbx" />
+                </div>
+              </div>
+              <div class="flight-class-wrap">
+                <div class="class-type">
+                  <input
+                    type="radio"
+                    name="class-type-rad"
+                    id="class-type-0"
+                    class="class-type-rad"
+                  /><label for="class-type-0">Economy</label>
+                </div>
+                <div class="class-type">
+                  <input
+                    type="radio"
+                    name="class-type-rad"
+                    id="class-type-1"
+                    class="class-type-rad"
+                  /><label for="class-type-1">Bussiness</label>
+                </div>
+                <div class="class-type">
+                  <input
+                    type="radio"
+                    name="class-type-rad"
+                    class="class-type-rad"
+                    id="class-type-2"
+                  /><label for="class-type-2">VIP</label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="summarize">
+            <input type="button" value=" 💸 Spočítat 💸 " id="btn-sum" />
+            <div class="summarize-detail hidden">
+              <div class="currency-wrap">
+                <input
+                  type="number"
+                  value=""
+                  placeholder="Klikni na tlačítko Spočítat"
+                  id="sum-number"
+                />
+              </div>
+              <label for="price-offer">Kolik máte k dispozici:</label>
+              <div class="currency-wrap">
+                <input
+                  type="number"
+                  name=""
+                  id="price-offer"
+                  placeholder="Zadejte vaši cenovou nabídku"
+                />
+              </div>
+              <input
+                type="text"
+                name=""
+                id="price-validation"
+                disabled
+                class="hidden"
+              />
+            </div>
+          </section>
+          <section class="notes">
+            <h2>Poznámky</h2>
+            <textarea
+              name=""
+              id="notes-txt"
+              cols="40"
+              rows="10"
+              onkeypress="return validate(event)"
+              placeholder="Do pole nejdou vkládat speciální znaky a čísla"
+            ></textarea>
+          </section>
+        </form>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

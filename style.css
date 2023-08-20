@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+label {
+  cursor: pointer;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #372af0 0%, #61bec5 100%);
+  padding: 20px;
+}
+
+.web-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.font-logo {
+  font-size: 6rem;
+}
+
+.font-title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+@media (max-width: 800px) {
+  .sm-hide {
+    display: none;
+  }
+}
+
+.flight-order-form section {
+  margin: 4rem 0;
+}
+
+.destination-card {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.destination-card h3 {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  filter: drop-shadow(0 0.2rem 0.75rem blue);
+}
+
+.opacity-hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.opacity-chosen {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+
+.destination-card img {
+  width: 210px;
+  height: 210px;
+  margin: 0 auto;
+}
+
+.destination-card figcaption {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.card-price {
+  font-size: 4rem;
+}
+
+.currency {
+  font-size: 40%;
+}
+
+.btn-card {
+  margin: 2rem 0;
+  min-width: 10rem;
+  min-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  background-image: linear-gradient(to top left, #6ef58f 0%, #10b634 100%);
+  cursor: pointer;
+}
+
+.btn-card-chosen,
+.btn-sum-hover {
+  box-shadow: 0 0 1.5rem rgba(0, 200, 0, 1);
+  transition: all 0.2s ease;
+}
+
+.destination-selection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.flight-details {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.count-return-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  font-size: 1.8rem;
+}
+
+#flight-count {
+  margin: 0 0.8rem;
+  min-width: 1rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#return-chkbx {
+  margin: 0 0.8rem;
+  scale: 4;
+  cursor: pointer;
+}
+
+.flight-class-wrap {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.class-type-rad {
+  scale: 2;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.class-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top left, #311de9 0%, #84d3f3 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 10rem;
+  cursor: pointer;
+}
+
+.class-type label {
+  font-size: 2rem;
+}
+
+.summarize {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summarize-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+#btn-sum {
+  margin: 2rem 0;
+  min-width: 10rem;
+  min-height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  background-image: linear-gradient(to top left, #18f850 0%, #109dee 100%);
+  cursor: pointer;
+}
+
+#sum-number,
+#price-offer,
+#price-validation {
+  min-width: 17rem;
+  scale: 2;
+  margin: 1rem 0 2rem 0;
+  background-image: linear-gradient(to top right, #109dee 0%, #18f850 100%);
+  border: none;
+  text-align: center;
+}
+
+.currency-wrap {
+  position: relative;
+}
+
+.currency-wrap::after {
+  content: "KČ";
+  position: absolute;
+  left: 26rem;
+  top: 1rem;
+  font-size: 1.4;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(3px);
+}
+
+.show-slow {
+  transition: all 0.5s ease;
+}
