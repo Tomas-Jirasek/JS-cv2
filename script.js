@@ -132,7 +132,6 @@ priceOffer.addEventListener('keyup', priceValidate);
 //  Filtrování klávesových vstupů uživatele v textarea elementu
 const validate = (event) => {
     let key = event.which || event.keyCode || 0;
-    console.log(key);
     return ((key >= 65 && key <= 92) ||
         (key >= 97 && key <= 124) || key == 32);
 };
